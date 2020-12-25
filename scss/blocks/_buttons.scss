@@ -1,0 +1,57 @@
+.button {
+    padding: 22px 0;
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    @include btn-use();
+
+    &_card {
+        border-radius: 0 0 10px 10px;
+        background-color: $main-color;
+        cursor: pointer;
+        &:hover {
+            box-shadow: inset 1px 1px 5px $main-color, 5px 5px 5px #CACACA;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    &_sold {
+        display: none;
+        border-radius: 0 0 10px 10px;
+        background-color: #000;
+    }
+
+    &_show {
+        display: block;
+        border: 1px solid #CACACA;
+        border-radius: 10px;
+        color: #000;
+        font-weight: 400;
+        font-size: 14px;
+        margin: 0 auto;
+        background-color: #fff;
+        padding: 24px 129px;
+        &:hover {
+            cursor: pointer;
+            box-shadow: inset 1px 1px 5px #CACACA, 5px 5px 20px #CACACA;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+
+    &_form {
+        background-color: $main-color;
+        padding: 24px 75px;
+        border-radius: 10px;
+        &:hover {
+            cursor: pointer;
+            box-shadow: inset 1px 1px 5px $main-color, 1px 1px 5px #CACACA;
+        }
+        &:active {
+            box-shadow: none;
+        }
+    }
+}

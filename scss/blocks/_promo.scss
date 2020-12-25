@@ -1,0 +1,53 @@
+.promo {
+    background-color: #1F2021;
+    padding: 83px 0 92px 0;
+
+    &__wrapper {
+        @include flex-box();
+    }
+
+    &__description {
+        
+    }
+
+    &__text {
+        color: #fff;
+        font-weight: 700;
+        @include adaptiv-font(48, 24);
+
+        &_little {
+            font-weight: 400;
+            @include adaptiv-font(28, 18);
+            margin-top: 26px;
+        }
+        span {
+            display: block;
+        }
+    }
+
+    &__form {}
+}
+
+
+
+.form {
+    &__email {
+        font-weight: 400;
+        font-size: 14px;
+        width: 300px;
+        height: 65px;
+        padding: 0px 33px;
+        border-radius: 10px;
+        @include btn-use();
+        margin-right: 16px;
+        
+    }
+}
+
+
+.checkbox {
+    margin-top: 24px;
+    color: #fff;
+    font-weight: 400;
+    font-size: 14px;
+}

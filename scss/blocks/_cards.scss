@@ -1,0 +1,237 @@
+.cards {
+    padding: 310px 0 83px 0;
+
+    &__wrapper {
+        @include flex-box();
+        flex-wrap: wrap;
+        margin-bottom: 68px;
+    }
+}
+
+.sort {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 38px;
+
+    &__wrapper {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__title {
+        margin-right: 48px;
+        font-weight: 700;
+        @include adaptiv-font(18, 16);
+    }
+
+    &__price,
+    &__age {
+        font-weight: 400;
+        @include adaptiv-font(18, 16);
+        position: relative;
+        padding-right: 30px;
+        cursor: pointer;
+    }
+
+    &__price {
+        margin-right: 55px;
+    }
+
+    &__arrow {
+        background: url(../img/arrow.png);
+        width: 15px;
+        height: 15px;
+        position: absolute;
+        top: 5px;
+        right: 0;
+        transition: all 0.3s ease;
+        cursor: pointer;
+    }
+}
+
+._active {
+    transform: rotate(180deg);
+}
+
+.card {
+    max-width: 380px;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 22px;
+
+    &__image {
+        position: relative;
+        text-align: center;
+        color: #fff;
+        margin-bottom: 29px;
+
+        // &::before {
+        //     content: '-40 %';
+        //     display: block;
+        //     width: 78px;
+        //     height: 39px;
+        //     background: #E52D2D;
+        //     border-radius: 10px;
+        //     position: absolute;
+        //     top: 34px;
+        //     left: 38px;
+        //     padding-top: 9px;
+        //     font-weight: 400;
+        //     font-size: 16px;
+        // }
+
+        // &::after {
+        //     content: "";
+        //     display: block;
+        //     width: 46px;
+        //     height: 46px;
+        //     position: absolute;
+        //     top: 34px;
+        //     right: 32px;
+        //     background: url(../img/like.svg) center no-repeat;
+        //     cursor: pointer;
+        // }
+    }
+
+    &__img {
+        width: 100%;
+        display: block;
+    }
+
+    &__sale,
+    &__selected {
+        position: absolute;
+        content: "";
+        display: block;
+        cursor: pointer;
+    }
+
+    &__sale {
+        width: 78px;
+        height: 39px;
+        background: #E52D2D;
+        border-radius: 10px;
+        top: 34px;
+        left: 38px;
+        padding-top: 9px;
+        font-weight: 400;
+        font-size: 16px;
+    }
+
+    &__selected {
+        width: 46px;
+        height: 46px;
+        top: 34px;
+        right: 32px;
+
+        &:hover {
+            opacity: 0.5;
+        }
+        &:active {
+            opacity: 1;
+        }
+
+        &-add {
+            display: block;
+            background-color: $main-color;
+            color: #fff;
+            font-weight: 400;
+            font-size: 14px;
+            position: absolute;
+            top: 100px;
+            right: 35px;
+            z-index: 3;
+            padding: 7px 25px 7px 10px;
+            border-radius: 5px;
+            display: none;
+            justify-content: center;
+            align-items: center;
+        }
+
+        &-text {
+            position: relative;
+        }
+
+        &-close {
+            font-size: 25px;
+            cursor: pointer;
+            position: absolute;
+            top: -12px;
+            right: -22px;
+        }
+    }
+
+    &__good {
+        font-weight: 700;
+        @include adaptiv-font(24, 18);
+
+        &_title {
+            margin-bottom: 22px;
+        }
+
+        &_price {
+            margin-bottom: 29px;
+        }
+    }
+
+    &__description {
+        @include flex-box();
+        margin-bottom: 26px;
+    }
+
+    &__text {
+        font-weight: 400;
+        font-size: 12px;
+
+        &_color {
+            max-width: 89px;
+            padding-left: 18px;
+            position: relative;
+
+            &::before {
+                content: '';
+                display: block;
+                width: 4px;
+                height: 26px;
+                background-color: $main-color;
+                position: absolute;
+                top: 0;
+                left: 0;
+            }
+        }
+
+        &_age,
+        &_property {
+            max-width: 89px;
+
+            span {
+                font-weight: 700;
+                @include adaptiv-font(16, 12);
+                display: block;
+            }
+        }
+
+        &_property {}
+    }
+
+
+}
+
+.card__image:hover::after {
+    opacity: 0.5;
+}
+
+.card:nth-child(4n - 2) .button_card {
+    display: none;
+}
+
+.card:nth-child(4n - 2) .button_sold {
+    display: block;
+}
+
+._property {}
+.show {
+    display: flex;
+}

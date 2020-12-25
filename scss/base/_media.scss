@@ -1,0 +1,145 @@
+@media (max-width: 1380px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+@media (max-width: 1199px) {
+    .container {
+        max-width: 960px;
+    }
+
+    .header__menu {
+        margin-right: 110px;
+    }
+
+    .form {
+        display: flex;
+        flex-direction: column;
+
+        &__email {
+            margin-bottom: 24px;
+        }
+    }
+
+    .button_form {
+        max-width: 300px;
+    }
+}
+
+@media (max-width: 991px) {
+    .container {
+        max-width: 720px;
+    }
+
+    .cards__wrapper {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 767px) {
+    .container {
+        max-width: 540px;
+    }
+
+    .promo {
+        &__wrapper {
+            flex-direction: column;
+        }
+
+        &__description {
+            margin-bottom: 24px;
+        }
+    }
+}
+
+@media (max-width: 575px) {
+    .container {
+        max-width: none;
+    }
+
+    .contact {
+
+        &__tel,
+        &__order {
+            display: none;
+        }
+    }
+
+    .contact__mobile {
+        display: block;
+    }
+
+    .sort {
+        flex-direction: column;
+        align-items: flex-start;
+
+        &__wrapper {
+            margin-top: 15px;
+        }
+    }
+
+}
+
+@media (max-width: 480px) {
+    .button_show {
+        padding: 24px 99px;
+    }
+    .form {
+        max-width: 270px;
+        &__email {
+            margin-right: 0;
+            width: 270px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .sort {
+        &__wrapper {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__price {
+            margin-bottom: 15px;
+        }
+    }
+
+    .card {
+        &__description {
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        &__text {
+            padding-left: 18px;
+            display: flex;
+            max-width: 200px;
+
+            span {
+                margin-right: 5px;
+            }
+
+            &:not(:last-child) {
+                margin-bottom: 10px;
+            }
+        }
+
+        &__sale {
+                display: none;
+        }
+    }
+    .button_show {
+        padding: 18px 65px;
+    }
+    .form {
+        max-width: 215px;
+        &__email {
+            width: 215px;
+        }
+    }
+    .button_form {
+        padding: 24px 40px;
+    }
+}

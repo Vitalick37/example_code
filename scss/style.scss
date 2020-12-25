@@ -1,0 +1,41 @@
+//npm install webp-converter@2.2.3 --save-dev
+
+/*Обнуление*/
+*,*:before,*:after{
+	padding: 0;
+	margin: 0;
+	border: 0;
+	box-sizing: border-box;
+}
+html,body{
+	height: 100%;
+	font-family: Montserrat, "Helvetica Neue", Helvetica, sans-serif;
+}
+
+
+@import 'base/variables';
+@import 'base/mixins';
+@import "fonts";
+
+.container {
+    max-width: $maxWidthContainer + px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+
+  
+
+@import 'blocks/buttons';
+@import 'blocks/checkbox';
+@import 'blocks/header';
+@import 'blocks/cards';
+@import 'blocks/promo';
+@import 'blocks/scroll-up';
+@import 'blocks/mobile-menu';
+@import 'blocks/menu-fixed';
+
+@import 'base/media';
+
+
+
